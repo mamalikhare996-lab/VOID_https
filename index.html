@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050914"><title>VOID ARENA | Gaming Hub</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+:root{--bg:#050914;--panel:#0b1426;--panel2:#0d1b31;--line:#1a3555;--blue:#32aaff;--cyan:#62e7ff;--txt:#edf7ff;--muted:#91a7c1;--green:#58f0c2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--txt);font-family:Vazirmatn,Tahoma,sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 15% 0%,#0b2b52 0,transparent 35%),radial-gradient(ellipse at 90% 75%,#10254a 0,transparent 35%),linear-gradient(135deg,#040711,#071326 55%,#030711)}
+body:after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.16;background-image:linear-gradient(#3a8ed51c 1px,transparent 1px),linear-gradient(90deg,#3a8ed51c 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(#000,transparent 85%)}
+#stars{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.shell{width:min(1120px,calc(100% - 36px));margin:auto}
+header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1b3552}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:1.5px;font-size:19px}.brand-mark{width:35px;height:35px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(145deg,#39bdff,#1555a0);box-shadow:0 0 24px #169cff55;color:#fff;font-size:18px}
+.brand span{color:var(--cyan)}nav{display:flex;gap:25px}nav a{font-size:13px;color:var(--muted);text-decoration:none;transition:.2s}nav a:hover{color:var(--cyan)}
+.header-right{display:flex;align-items:center;gap:10px}.online{font-size:11px;color:var(--green);display:flex;align-items:center;gap:7px}.online:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+.btn{border:1px solid #2877ad;background:linear-gradient(120deg,#1476b9,#123c72);color:white;padding:10px 16px;border-radius:10px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;transition:.2s;box-shadow:0 7px 20px #087bd522}.btn:hover{transform:translateY(-2px);filter:brightness(1.15)}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:58px 0 38px}.kicker{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:3px}.hero h1{font-size:clamp(38px,5.5vw,62px);line-height:1.25;margin:13px 0 12px;font-weight:900}.hero h1 span{color:var(--cyan);text-shadow:0 0 25px #22aaff66}.hero p{color:var(--muted);font-size:14px;line-height:2;max-width:510px;margin:0}.hero-buttons{display:flex;gap:10px;margin-top:23px;flex-wrap:wrap}.btn.secondary{background:#0b1729;border-color:#29445f;color:#c7e7ff;box-shadow:none}
+.hero-art{height:280px;position:relative;display:grid;place-items:center}.planet{width:195px;height:195px;border-radius:50%;position:relative;background:radial-gradient(circle at 35% 28%,#7ceaff,#1685c9 18%,#103a75 48%,#071327 72%);box-shadow:inset -20px -20px 40px #020817,0 0 55px #0789ff55,0 0 100px #0789ff22}.planet:after{content:"";position:absolute;width:270px;height:75px;border:2px solid #5ce3ff99;border-radius:50%;transform:rotate(-22deg);top:61px;left:-38px;box-shadow:0 0 18px #1caaff66}.orbit{position:absolute;width:265px;height:265px;border:1px dashed #51caff55;border-radius:50%;animation:spin 28s linear infinite}.orbit:before{content:"";position:absolute;top:36px;right:12px;width:10px;height:10px;border-radius:50%;background:#8af4ff;box-shadow:0 0 18px #42cfff}.float-label{position:absolute;padding:9px 13px;border:1px solid #24527a;background:#09172bdc;border-radius:10px;font-size:11px;color:#bceeff;box-shadow:0 10px 30px #0005}.float-label.one{top:27px;right:2px}.float-label.two{bottom:23px;left:0}@keyframes spin{to{transform:rotate(360deg)}}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin:22px 0 14px}.section-head h2{font-size:18px;margin:0}.section-head small{font-size:10px;color:var(--muted);letter-spacing:1.5px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.card{background:linear-gradient(145deg,#0e1d33ed,#091323f2);border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:0 12px 30px #0002;min-width:0}.stat-top{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px}.stat-icon{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:#12365a;color:var(--cyan);font-size:16px}.stat-num{font-size:26px;font-weight:900;margin-top:7px}.stat-note{font-size:10px;color:var(--green);margin-top:2px}
+.main-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:15px;margin-top:28px;margin-bottom:60px}.leaderboard{width:100%;border-collapse:collapse}.leaderboard th,.leaderboard td{padding:12px 9px;text-align:right;border-bottom:1px solid #1a3048;font-size:12px;white-space:nowrap}.leaderboard th{color:var(--muted);font-weight:500}.leaderboard tr:last-child td{border:0}.player{display:flex;align-items:center;gap:9px;font-weight:700}.avatar{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#1b83c8,#17294b);display:grid;place-items:center;color:#dffaff;font-weight:900}.rank{color:var(--cyan);font-weight:900}.league{font-size:9px;color:#8ce7ff;background:#10324c;padding:4px 7px;border-radius:20px}
+.game-card{background:linear-gradient(155deg,#0c203a,#081323);border:1px solid #23517a;border-radius:17px;padding:18px;position:relative;overflow:hidden}.game-card:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:#087fff18;filter:blur(30px);top:-70px;left:-70px}.game-title{display:flex;justify-content:space-between;align-items:center;position:relative}.game-title h3{font-size:16px;margin:0}.game-title span{font-size:10px;color:var(--green)}.game-desc{font-size:11px;color:var(--muted);line-height:1.9;margin:8px 0 14px;position:relative}
+.game-stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;position:relative}.game-stat{background:#071326;border:1px solid #1a3b5a;border-radius:10px;padding:10px}.game-stat small{display:block;color:var(--muted);font-size:10px}.game-stat b{display:block;font-size:20px;margin-top:2px}
+.arena{height:178px;border:1px solid #1a4569;border-radius:14px;margin:14px 0;background:radial-gradient(circle at center,#123e65 0,#08182b 55%,#061020);display:grid;place-items:center;position:relative;overflow:hidden}.arena:before,.arena:after{content:"";position:absolute;border:1px solid #2b7eaa55;border-radius:50%;width:205px;height:85px;transform:rotate(-24deg)}.arena:after{width:250px;height:120px;transform:rotate(35deg);border-color:#28629a44}
+#target{width:86px;height:86px;border-radius:50%;border:1px solid #7deeff;background:radial-gradient(circle at 35% 30%,#d7ffff,#36caff 20%,#0870b8 55%,#06274c 78%);box-shadow:0 0 22px #28baffaa,0 0 55px #168fff66;cursor:pointer;z-index:1;transition:transform .08s;display:grid;place-items:center;color:#fff;font-size:28px;user-select:none}#target:active{transform:scale(.88)}#target:disabled{cursor:not-allowed;filter:grayscale(.6);opacity:.6}
+.game-actions{display:flex;gap:9px}.game-actions .btn{flex:1}.game-hint{text-align:center;color:var(--muted);font-size:10px;margin-top:10px;min-height:17px}
+.profile-row{display:flex;align-items:center;gap:12px}.profile-avatar{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(140deg,#168fd0,#172e58);font-weight:900;font-size:18px;box-shadow:0 0 20px #168fff33}.profile-row strong{font-size:13px}.profile-row small{display:block;color:var(--muted);font-size:10px;margin-top:3px}.level-line{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;margin:20px 0 7px}.bar{height:7px;border-radius:10px;background:#142943;overflow:hidden}.bar i{display:block;width:72%;height:100%;background:linear-gradient(90deg,#137bce,#65eaff);border-radius:10px;box-shadow:0 0 12px #28aaff}
+.activity{display:grid;gap:9px;margin-top:16px}.activity-item{display:flex;align-items:center;justify-content:space-between;padding:11px;border:1px solid #1b3653;border-radius:11px;background:#09172a}.activity-item b{font-size:11px}.activity-item small{display:block;color:var(--muted);font-size:9px;margin-top:3px}.activity-item em{font-style:normal;color:var(--cyan);font-size:11px;font-weight:800}
+footer{border-top:1px solid #19324c;padding:20px 0;text-align:center;color:#7890aa;font-size:10px}
+.toast{position:fixed;bottom:18px;left:18px;background:#0b2340;border:1px solid #2774a8;padding:11px 15px;border-radius:10px;font-size:12px;opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:none}
+@media(max-width:760px){.shell{width:min(100% - 28px,560px)}header{height:68px}nav{display:none}.online{display:none}.hero{grid-template-columns:1fr;padding:35px 0 25px;gap:5px}.hero-art{height:205px;order:-1}.planet{width:145px;height:145px}.planet:after{width:205px;height:58px;top:45px;left:-30px}.orbit{width:205px;height:205px}.float-label.one{right:0;top:8px}.float-label.two{left:0;bottom:5px}.hero h1{font-size:42px}.hero p{font-size:12px}.stats{gap:8px}.card{padding:12px}.stat-num{font-size:21px}.stat-top{font-size:10px}.main-grid{grid-template-columns:1fr}.section-head h2{font-size:16px}}
+@media(max-width:390px){.stats{grid-template-columns:1fr}.hero h1{font-size:36px}.header-right .btn{padding:8px 10px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body><canvas id="stars"></canvas>
+<div class="shell">
+<header>
+ <div class="brand"><div class="brand-mark">V</div>VOID <span>ARENA</span></div>
+ <nav><a href="#home">خانه</a><a href="#ranking">رتبه‌بندی</a><a href="#game">بازی کلیکی</a><a href="#profile">پروفایل</a></nav>
+ <div class="header-right"><span class="online">سیستم آنلاین</span><button class="btn" onclick="toast('به VOID ARENA خوش اومدی!')">داشبورد من</button></div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div><div class="kicker">WELCOME TO THE NEXT LEVEL</div><h1>وارد دنیای<br><span>VOID ARENA</span> شو.</h1><p>رقابت کن، امتیاز جمع کن و رتبه‌ات رو بالا ببر. اینجا یک فضای گیمینگ با رتبه‌بندی و یک بازی کوچک برای ثبت رکورد خودته.</p><div class="hero-buttons"><a class="btn" href="#game" style="text-decoration:none">شروع بازی کلیکی</a><a class="btn secondary" href="#ranking" style="text-decoration:none">دیدن رتبه‌ها</a></div></div>
+ <div class="hero-art"><div class="orbit"></div><div class="planet"></div><div class="float-label one">✦ SEASON 01</div><div class="float-label two">● RANK UP YOUR GAME</div></div>
+</section>
+<section>
+ <div class="section-head"><h2>آمار آرنا</h2><small>ARENA OVERVIEW</small></div>
+ <div class="stats">
+  <div class="card"><div class="stat-top"><span>بازیکنان آنلاین</span><span class="stat-icon">◉</span></div><div class="stat-num">2,481</div><div class="stat-note">● وضعیت نمایشی</div></div>
+  <div class="card"><div class="stat-top"><span>کل امتیازها</span><span class="stat-icon">✧</span></div><div class="stat-num">84.6K</div><div class="stat-note">↑ آمار نمونه</div></div>
+  <div class="card"><div class="stat-top"><span>رقابت‌ها</span><span class="stat-icon">♜</span></div><div class="stat-num">1,092</div><div class="stat-note">✦ فصل اول</div></div>
+ </div>
+</section>
+<div class="main-grid">
+ <section id="ranking">
+  <div class="section-head"><h2>🏆 جدول رتبه‌بندی</h2><small>TOP PLAYERS</small></div>
+  <div class="card" style="overflow-x:auto">
+   <table class="leaderboard"><thead><tr><th>رتبه</th><th>بازیکن</th><th>لیگ</th><th>امتیاز</th></tr></thead><tbody>
+   <tr><td class="rank">#01</td><td><div class="player"><div class="avatar">A</div>Alpha</div></td><td><span class="league">DIAMOND</span></td><td>9,840</td></tr>
+   <tr><td class="rank">#02</td><td><div class="player"><div class="avatar">N</div>Nova</div></td><td><span class="league">PLATINUM</span></td><td>8,720</td></tr>
+   <tr><td class="rank">#03</td><td><div class="player"><div class="avatar">X</div>ShadowX</div></td><td><span class="league">PLATINUM</span></td><td>7,950</td></tr>
+   <tr><td class="rank">#04</td><td><div class="player"><div class="avatar">Z</div>Zero</div></td><td><span class="league">GOLD</span></td><td>6,410</td></tr>
+   <tr><td class="rank">#05</td><td><div class="player"><div class="avatar">V</div>Vortex</div></td><td><span class="league">GOLD</span></td><td>5,980</td></tr>
+   </tbody></table>
+  </div>
+  <section id="game" style="margin-top:25px">
+   <div class="section-head"><h2>⚡ بازی هسته انرژی</h2><small>CLICK THE CORE</small></div>
+   <div class="game-card">
+    <div class="game-title"><h3>انرژی رو جمع کن!</h3><span>● MINI GAME</span></div>
+    <p class="game-desc">روی هسته وسط صفحه کلیک کن و در ۱۵ ثانیه تا می‌تونی امتیاز بگیر. رکوردت روی همین دستگاه ذخیره می‌شه.</p>
+    <div class="game-stats"><div class="game-stat"><small>امتیاز این دور</small><b id="score">0</b></div><div class="game-stat"><small>زمان باقی‌مانده</small><b><span id="time">15</span> ثانیه</b></div></div>
+    <div class="arena"><button id="target" disabled aria-label="هسته انرژی">✦</button></div>
+    <div class="game-actions"><button class="btn" id="start">شروع بازی</button><button class="btn secondary" id="reset">شروع دوباره</button></div>
+    <div class="game-hint" id="hint">برای شروع، دکمه «شروع بازی» رو بزن.</div>
+   </div>
+  </section>
+ </section>
+ <aside id="profile">
+  <div class="section-head"><h2>پروفایل بازیکن</h2><small>PLAYER CARD</small></div>
+  <div class="card">
+   <div class="profile-row"><div class="profile-avatar">U</div><div><strong>PLAYER ONE</strong><small>عضو آرنا · سطح ۲۴</small></div></div>
+   <div class="level-line"><span>پیشرفت سطح</span><b style="color:var(--cyan)">72%</b></div><div class="bar"><i></i></div>
+   <div class="activity">
+    <div class="activity-item"><div><b>رکورد بازی کلیکی</b><small>بهترین امتیاز شخصی</small></div><em id="best">0 XP</em></div>
+    <div class="activity-item"><div><b>وضعیت حساب</b><small>حالت نمایشی آفلاین</small></div><em>ACTIVE</em></div>
+   </div>
+  </div>
+  <div class="section-head" style="margin-top:24px"><h2>راهنمای آرنا</h2></div>
+  <div class="card"><div style="font-size:12px;line-height:2;color:var(--muted)"><b style="color:#eaf8ff">چطور بازی کنم؟</b><br>۱. شروع بازی رو بزن.<br>۲. تا پایان زمان روی هسته کلیک کن.<br>۳. رکورد خودت رو ثبت کن و دوباره تلاش کن!</div></div>
+ </aside>
+</div>
+</main>
+<footer>VOID ARENA © 2026 · یک داشبورد نمایشی با بازی کلیکی</footer>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id);
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.classList.remove('show'),2200)}
+let score=0,time=15,running=false,timer=null,best=Number(localStorage.getItem('voidBest')||0);
+$('best').textContent=best+' XP';
+function update(){ $('score').textContent=score; $('time').textContent=time; }
+function finish(){running=false;clearInterval(timer);$('target').disabled=true;$('start').disabled=false;$('start').textContent='بازی دوباره';$('hint').textContent='پایان بازی! امتیاز این دور: '+score+' — دوباره تلاش کن.';if(score>best){best=score;localStorage.setItem('voidBest',best);$('best').textContent=best+' XP';toast('رکورد جدید ثبت شد!')} }
+function startGame(){if(running)return;score=0;time=15;running=true;update();$('target').disabled=false;$('start').disabled=true;$('hint').textContent='بزن بریم! سریع کلیک کن ⚡';timer=setInterval(()=>{time--;update();if(time<=0)finish()},1000)}
+$('start').addEventListener('click',startGame);
+$('reset').addEventListener('click',()=>{clearInterval(timer);running=false;score=0;time=15;$('target').disabled=true;$('start').disabled=false;$('start').textContent='شروع بازی';$('hint').textContent='برای شروع، دکمه «شروع بازی» رو بزن.';update()});
+$('target').addEventListener('click',()=>{if(!running)return;score++;update();$('target').style.transform='scale(.9)';setTimeout(()=>$('target').style.transform='',70)});
+const c=$('stars'),ctx=c.getContext('2d');let w,h,stars=[];
+function resize(){w=c.width=innerWidth;h=c.height=innerHeight;stars=Array.from({length:Math.min(85,Math.floor(w/13))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.4+.3,s:Math.random()*.22+.04}))}
+function animate(){ctx.clearRect(0,0,w,h);for(const p of stars){p.y+=p.s;if(p.y>h){p.y=0;p.x=Math.random()*w}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(122,210,255,.55)';ctx.fill()}requestAnimationFrame(animate)}
+resize();if(!matchMedia('(prefers-reduced-motion: reduce)').matches){animate();addEventListener('resize',resize)}
+</script>
+</body></html>
